@@ -15,6 +15,14 @@ test-tdd:
     --ui tdd \
     test/tdd/*.js
 
+test-tdd-firebase:
+	@./node_modules/.bin/mocha \
+	    --reporter $(REPORTER) \
+	    --require should \
+	    --require sinon \
+	    --ui tdd \
+	    test/tdd/firebase.spec.js
+
 test-bdd:
 	@./node_modules/.bin/mocha \
     --reporter $(REPORTER) \
